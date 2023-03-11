@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="fragments/head :: head"></head>
+
+<body>
+<nav th:replace="fragments/navigation :: navigation"></nav>
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+        <h1 class="mb-3 bread">About Us</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ftco-section ftco-about">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+      </div>
+      <div class="col-md-6 wrap-about ftco-animate">
+        <div class="heading-section heading-section-white pl-md-5">
+          <span class="subheading">About us</span>
+
+          <p>Welcome to Lux Rental, your premier destination for luxury car rentals. At Lux Rental, we understand that driving a luxurious car can make all the difference in your travels, whether it’s for business or leisure. That’s why we offer an exceptional fleet of the latest luxury vehicles to ensure that you have an unforgettable driving experience.</p>
+          <p>Our team of dedicated professionals is committed to providing you with a seamless and hassle-free rental experience. We take pride in offering exceptional customer service and personalized attention to detail, ensuring that you receive the highest level of care and attention throughout your rental journey.</p>
+          <p>Whether you’re looking for a high-end sports car or a spacious SUV, we have a wide range of luxury vehicles to choose from. Our fleet includes some of the world’s most sought-after brands, such as BMW, Mercedes-Benz, Audi, and more.</p>
+          <p>At Lux Rental, we believe that luxury should be affordable, which is why we offer competitive rates and flexible rental options to suit your specific needs. Whether you need a car for a day, a week, or longer, we have a rental plan that will fit your budget.</p>
+          <p>We are committed to ensuring that your rental experience is not only luxurious but also safe and secure. Our vehicles undergo regular maintenance and safety checks to ensure that they are in top condition before every rental.</p>
+          <p>At Lux Rental, we are more than just a rental car company – we are your partner in luxury travel. Whether you’re traveling for business or leisure, we’re here to provide you with the ultimate driving experience. Contact us today to book your luxury car rental and experience the ultimate in luxury travel.</p>
+          <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ftco-counter ftco-section img bg-light" id="section-counter">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number" data-number="10">0</strong>
+            <span>Year <br>Experienced</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number" data-number="100">0</strong>
+            <span>Total <br>Cars</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number" data-number="2590">0</strong>
+            <span>Happy <br>Customers</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text d-flex align-items-center">
+            <strong class="number" data-number="9">0</strong>
+            <span>Total <br>Branches</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div th:replace="fragments/js :: js"></div>
+
+</body>
+</html>
