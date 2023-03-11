@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AboutController {
-    @GetMapping("/about.html")
+    @GetMapping("/about")
     public String cars(ModelMap map) {
-        return "home/about";
+        map.addAttribute("menu", "about");
+        return "about/index";
     }
 }

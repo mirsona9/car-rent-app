@@ -17,7 +17,7 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long carId;
+    private Long id;
 
     @Column(name = "brand", nullable = false)
     private String brand;
@@ -28,8 +28,18 @@ public class Car {
     @Column(name = "production_year", nullable = false)
     private Integer productionYear;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "car_id")
-    List<Reservation> reservations = new ArrayList<>();
+    @Column(name = "price")
+    private double price;
 
+    @Column(name = "image")
+    private String image;
+
+    @Column(name = "sale")
+    private boolean sale;
+
+    @Column(name = "salePrice")
+    private double salePrice;
+
+    @OneToMany(mappedBy = "car")
+    List<Reservation> reservations = new ArrayList<>();
 }

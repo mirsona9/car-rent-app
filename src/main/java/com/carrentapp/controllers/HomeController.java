@@ -9,6 +9,7 @@ public class HomeController {
     @GetMapping("/")
     public String index(ModelMap map) {
         map.addAttribute("myVariable", "Hello from server");
+        map.addAttribute("menu", "home");
         return "home/index";
     }
 }
