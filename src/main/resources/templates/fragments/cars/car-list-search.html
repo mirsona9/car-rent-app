@@ -1,0 +1,25 @@
+<section th:fragment="car-list-search" class="ftco-section ftco-no-pb bg-light">
+  <div class="container">
+    <form action="/cars" method="get" th:object="${filter}" class="request-form ftco-animate bg-primary">
+      <div th:replace="fragments/alert :: alert"></div>
+      <div class="d-flex">
+        <div class="form-group">
+          <label class="label">Find Vehicle</label>
+          <input type="text" class="form-control" th:field="*{vehicle}" placeholder="Search by brand or models" />
+        </div>
+        <div class="form-group ml-2">
+          <label class="label">Pick-up date</label>
+          <input type="text" class="form-control" th:field="*{pickUp}" id="book_pick_date" placeholder="Date" />
+        </div>
+        <div class="form-group ml-2">
+          <label class="label">Drop-off date</label>
+          <input type="text" class="form-control" th:field="*{dropOff}" id="book_off_date" placeholder="Date" />
+        </div>
+        <div class="form-group ml-4">
+          <label class="label"></label>
+          <input type="submit" value="Search you vehicle" class="btn btn-secondary py-3 px-4" />
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

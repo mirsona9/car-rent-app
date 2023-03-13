@@ -29,7 +29,7 @@ public class Car {
     private Integer productionYear;
 
     @Column(name = "price")
-    private double price;
+    private Double price;
 
     @Column(name = "image")
     private String image;
@@ -38,7 +38,7 @@ public class Car {
     private boolean sale;
 
     @Column(name = "salePrice")
-    private double salePrice;
+    private Double salePrice;
 
     @OneToMany(mappedBy = "car")
     List<Reservation> reservations = new ArrayList<>();

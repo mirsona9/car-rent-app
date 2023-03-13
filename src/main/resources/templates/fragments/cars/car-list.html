@@ -1,0 +1,57 @@
+<section class="ftco-section bg-light pt-4" th:fragment="car-list">
+  <div class="container">
+    <div class="row" th:if="${cars != null && cars.size() > 0}">
+
+      <div th:each="car: ${cars}" class="col-md-4">
+        <div class="car-wrap rounded ftco-animate">
+          <!-- style="background-image: url(images/car-1.jpg);" -->
+          <div class="img rounded d-flex align-items-end" th:style="*{'background: url(''images/' + car.image  + ''') no-repeat cover;'}">
+          </div>
+          <div class="text">
+            <h2 class="mb-0"><a th:href="@{'/courses/detail/' + ${car.id}}" th:text="${car.brand}"></a></h2>
+            <div class="d-flex mb-3">
+              <span class="cat" th:text="${car.productionYear}"></span>
+
+              <p class="price ml-auto" th:if="${not car.sale}">
+                <span th:text="${'$' + car.price}"></span>
+                <span>/day</span>
+              </p>
+
+              <p class="price ml-auto" th:if="${car.sale}">
+                <del th:text="${'$' + car.price}"></del>
+                <span th:text="${'$' + car.salePrice}"></span>
+                <span>/day</span>
+              </p>
+            </div>
+            <p class="d-flex mb-0 d-block"> <a th:href="@{'/courses/detail/' + ${car.id}}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- For pagination: https://www.baeldung.com/spring-thymeleaf-pagination  -->
+    <!-- <div  th:if="${cars != null && cars.size() > 0}" class="row mt-5">
+      <div class="col text-center">
+        <div class="block-27">
+          <ul>
+            <li><a href="#">&lt;</a></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="row" th:if="${cars == null || cars.size() < 1}">
+      <div class="col-12">
+        <div class="alert alert-warning" role="alert">
+          <i class="icon icon-warning2"></i> No cars to show!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
